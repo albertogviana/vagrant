@@ -8,4 +8,6 @@ Vagrant.configure("2") do |config|
 
 	config.vm.provision :shell, :path => "install.sh"
 
+	config.vm.synced_folder ".", "/vagrant", :mount_options => ["dmode=755","fmode=755"]
+
 end
